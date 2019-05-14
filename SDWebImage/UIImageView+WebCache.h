@@ -7,7 +7,12 @@
  */
 
 #import "SDWebImageCompat.h"
+#if __has_include(<SDWebImage/SDWebImageManager.h>)
+#import <SDWebImage/SDWebImageManager.h>
+#else
 #import "SDWebImageManager.h"
+#endif
+
 
 /**
  * Usage with a UITableViewCell sub-class:

@@ -9,8 +9,11 @@
 #import "SDWebImageCompat.h"
 
 #if SD_MAC
-
+#if __has_include(<SDWebImage/SDWebImageManager.h>)
+#import <SDWebImage/SDWebImageManager.h>
+#else
 #import "SDWebImageManager.h"
+#endif
 
 /**
  * Integrates SDWebImage async downloading and caching of remote images with NSButton.
